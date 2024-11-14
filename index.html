@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Interface Admin</h2>
+        <ul>
+            <li><a href="#dashboard">Table de bord</a></li>
+            <li><a href="#products">Produits</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#reports">Rapports</a></li>
+            <li><a href="../client/index.html" target="_blank">Voir la Boutique</a></li> <!-- Lien vers l'interface client -->
+        </ul>
+    </div>
+    <div class="main-content">
+        <section id="dashboard">
+            <h2>Table de bord</h2>
+            <div class="cards">
+                <div class="card">Produits disponibles: <span id="product-count">0</span></div>
+                <div class="card">Clients inscrits: <span id="client-count">0</span></div>
+            </div>
+        </section>
+        <section id="products">
+            <h2>Produits</h2>
+            <input type="text" id="product-name" placeholder="Nom du produit">
+            <input type="number" id="product-price" placeholder="Prix" min="0" step="0.01">
+            <input type="text" id="product-description" placeholder="Description du produit">
+            <input type="number" id="product-stock" placeholder="Stock disponible" min="0">
+            <button id="add-product-btn">Ajouter Produit</button>
+            <ul id="product-list"></ul>
+        </section>
+        <section id="clients">
+            <h2>Clients</h2>
+            <input type="text" id="client-name" placeholder="Nom du client">
+            <button id="add-client-btn">Ajouter Client</button>
+            <ul id="client-list"></ul>
+        </section>
+        <section id="reports">
+            <h2>Rapports</h2>
+            <button id="generate-report-btn">Générer Rapport</button>
+            <div id="report-output"></div>
+        </section>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
